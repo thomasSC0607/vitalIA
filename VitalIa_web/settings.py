@@ -29,10 +29,11 @@ MEDIA_URL = '/media/'
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@$d_2m&-(m-6$gxlqos4va12&i9g+2cc5routop4u+=vs-4kbr'
+DEBUG = config('DEBUG', default=False, cast=bool)
 
+# Secret Key
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -124,7 +125,10 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / "db.sqlite3",
     # }
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    'default': dj_database_url.parse(
+        # Tries DATABASE_URL first (Render), falls back to EXTERNAL_DATABASE_URL (local)
+        os.environ.get('DATABASE_URL') or config('EXTERNAL_DATABASE_URL')
+    )
 }
 
 

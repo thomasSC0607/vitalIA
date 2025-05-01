@@ -1,7 +1,12 @@
+// filepath: c:\Users\thoma\Documents\AppP1\thomas_fork\vitalIA\.gitignore
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Ignore large files
+myenv/Lib/site-packages/torch/lib/torch_cpu.dll
+myenv/Lib/site-packages/torch/lib/dnnl_lib
 
 # Environment
 .env

@@ -1,0 +1,108 @@
+/* Body y fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Contenido principal */
+.content {
+    padding-top: 120px;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor central */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Encabezado de la página */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-size: 72px;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header h1:first-letter {
+    color: #4A90E2;
+}
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 30px; /* Espaciado entre el logo y el texto */
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+.welcome-card h2 {
+    font-size: 48px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.welcome-card p {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Opciones del Dashboard */
+.dashboard-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card h3 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.option-card p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
